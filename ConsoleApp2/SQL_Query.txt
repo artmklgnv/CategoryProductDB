@@ -1,0 +1,9 @@
+﻿SELECT 
+Products.Name as ProductName, 
+Categories.Name as CategoryName
+FROM Products
+LEFT JOIN CategoryProduct
+  ON Products.id = CategoryProduct.ProductsId
+LEFT JOIN Categories
+  ON Categories.Id = CategoryProduct.CategoriesId
+ORDER BY ProductName
